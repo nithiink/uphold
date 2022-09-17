@@ -55,3 +55,148 @@ final kNewTextFieldDecoration = InputDecoration(
     ),
   ),
 );
+
+final volunterrTextFieldDecoration = InputDecoration(
+  filled: true,
+  fillColor: Color(0xffFF6060),
+  hintText: 'Volunteer',
+  hintStyle: TextStyle(
+    color: Colors.black.withOpacity(0.32),
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+  ),
+//   fillColor: Colors.black,
+  enabledBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(16),
+    borderSide: BorderSide(
+      width: 1.0,
+      color: Color(0xff333333),
+    ),
+  ),
+  border: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(16),
+  ),
+  focusedBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(16),
+    borderSide: BorderSide(
+      width: 2.0,
+      color: Colors.black,
+    ),
+  ),
+);
+
+final organisationTextFieldDecoration = InputDecoration(
+  filled: true,
+  fillColor: Color(0xffFFEBB9),
+  hintText: 'Organisation',
+  hintStyle: TextStyle(
+    color: Colors.black.withOpacity(0.32),
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+  ),
+//   fillColor: Colors.black,
+  enabledBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(16),
+    borderSide: BorderSide(
+      width: 1.0,
+      color: Color(0xff333333),
+    ),
+  ),
+  border: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(16),
+  ),
+  focusedBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(16),
+    borderSide: BorderSide(
+      width: 2.0,
+      color: Colors.black,
+    ),
+  ),
+);
+
+final bothTextFieldDecoration = InputDecoration(
+  filled: true,
+  fillColor: Color(0xffCBEFFF),
+  hintText: 'Both',
+  hintStyle: TextStyle(
+    color: Colors.black.withOpacity(0.32),
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+  ),
+//   fillColor: Colors.black,
+  enabledBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(16),
+    borderSide: BorderSide(
+      width: 1.0,
+      color: Color(0xff333333),
+    ),
+  ),
+  border: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(16),
+  ),
+  focusedBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(16),
+    borderSide: BorderSide(
+      width: 2.0,
+      color: Colors.black,
+    ),
+  ),
+);
+
+final personTextFieldDecoration = InputDecoration(
+  filled: true,
+  fillColor: Color(0xffCBEFFF),
+  hintText: 'In-Person',
+  hintStyle: TextStyle(
+    color: Colors.black.withOpacity(0.32),
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+  ),
+//   fillColor: Colors.black,
+  enabledBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(16),
+    borderSide: BorderSide(
+      width: 1.0,
+      color: Color(0xff333333),
+    ),
+  ),
+  border: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(16),
+  ),
+  focusedBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(16),
+    borderSide: BorderSide(
+      width: 2.0,
+      color: Colors.black,
+    ),
+  ),
+);
+
+final remoTextFieldDecoration = InputDecoration(
+  filled: true,
+  fillColor: Color(0xffCBEFFF),
+  hintText: 'In-Person',
+  hintStyle: TextStyle(
+    color: Colors.black.withOpacity(0.32),
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+  ),
+//   fillColor: Colors.black,
+  enabledBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(16),
+    borderSide: BorderSide(
+      width: 1.0,
+      color: Color(0xff333333),
+    ),
+  ),
+  border: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(16),
+  ),
+  focusedBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(16),
+    borderSide: BorderSide(
+      width: 2.0,
+      color: Colors.black,
+    ),
+  ),
+);
