@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hack_zurich_2022/auth_service.dart';
+import 'package:hack_zurich_2022/login/sign_in.dart';
+import 'package:hack_zurich_2022/login/sign_up.dart';
 
 class LandingPage extends StatelessWidget {
   @override
@@ -7,7 +10,6 @@ class LandingPage extends StatelessWidget {
       backgroundColor: Color(0xFFF5F5F5),
       body: SafeArea(
         child: Container(
-
           child: Column(
             children: [
               Expanded(
@@ -52,29 +54,37 @@ class LandingPage extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          height: 67,
-                          width: 175,
-                          child: Center(
-                            child: Text(
-                              'Sign In',
-                              style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => SignInScreen()),
+                            );
+                          },
+                          child: Container(
+                            height: 67,
+                            width: 175,
+                            child: Center(
+                              child: Text(
+                                'Sign In',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
-                          ),
-                          decoration: BoxDecoration(
-                            color: Color(0xff333333),
-                            borderRadius: BorderRadius.circular(21),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color(0xff333333).withOpacity(0.5),
-                                offset:
-                                    Offset(2, 2), // changes position of shadow
-                              ),
-                            ],
+                            decoration: BoxDecoration(
+                              color: Color(0xff333333),
+                              borderRadius: BorderRadius.circular(21),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Color(0xff333333).withOpacity(0.5),
+                                  offset:
+                                      Offset(2, 2), // changes position of shadow
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                         Container(
@@ -95,22 +105,27 @@ class LandingPage extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Container(
-                          height: 67,
-                          width: 69,
-                          child: Center(
-                            child: Image.asset("assets/login/google.png"),
-                          ),
-                          decoration: BoxDecoration(
-                            color: Color(0xff333333),
-                            borderRadius: BorderRadius.circular(21),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color(0xff333333).withOpacity(0.5),
-                                offset:
-                                    Offset(2, 2), // changes position of shadow
-                              ),
-                            ],
+                        GestureDetector(
+                          onTap: (){
+                            AuthService().signInWithGoogle();
+                          },
+                          child: Container(
+                            height: 67,
+                            width: 69,
+                            child: Center(
+                              child: Image.asset("assets/login/google.png"),
+                            ),
+                            decoration: BoxDecoration(
+                              color: Color(0xff333333),
+                              borderRadius: BorderRadius.circular(21),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Color(0xff333333).withOpacity(0.5),
+                                  offset:
+                                      Offset(2, 2), // changes position of shadow
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -121,24 +136,32 @@ class LandingPage extends StatelessWidget {
                 flex: 3,
                 child: SizedBox(),
               ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 30),
-                width: double.infinity,
-                height: 67,
-                child: Center(
-                  child: Text(
-                    'Create an account',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SignUpScreen()),
+                  );
+                },
+                child: Container(
+                  margin: EdgeInsets.symmetric(horizontal: 30),
+                  width: double.infinity,
+                  height: 67,
+                  child: Center(
+                    child: Text(
+                      'Create an account',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                ),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(color: Color(0xff333333), width: 2),
-                  borderRadius: BorderRadius.circular(21),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(color: Color(0xff333333), width: 2),
+                    borderRadius: BorderRadius.circular(21),
+                  ),
                 ),
               ),
               Expanded(

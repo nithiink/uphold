@@ -8,7 +8,6 @@ class SignInScreen extends StatelessWidget {
       backgroundColor: Color(0xFFF5F5F5),
       body: SafeArea(
         child: Container(
-
           child: Column(
             children: [
               Expanded(

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1020723733318",
+    "project_id": "hackzurich2022",
+    "storage_bucket": "hackzurich2022.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020723733318:android:f8a6dc658cc0dfa5f1bb47",
+        "android_client_info": {
+          "package_name": "com.example.hack_zurich_2022"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020723733318-fjrjj1ddvdkiib5tmp29egkjhi9vo1po.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdFr1IpKvbBdOCf7O0hkIjDrkmUwXWOEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1020723733318-fjrjj1ddvdkiib5tmp29egkjhi9vo1po.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
