@@ -1,4 +1,4 @@
-# hack_zurich_2022
+# UpHold
 
 A new Flutter project.
 
