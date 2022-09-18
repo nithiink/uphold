@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hack_zurich_2022/constants.dart';
+import "package:hack_zurich_2022/constants.dart";
 
 class ProfileSep extends StatelessWidget {
   @override
@@ -59,6 +59,10 @@ class ProfileSep extends StatelessWidget {
                 child: Container(
                   padding: EdgeInsets.only(left: 5, right: 30),
                   child: TextField(
+                    onTap: () {
+                      print("Volunteer");
+                    },
+                    readOnly: true,
                     onChanged: (value) {},
                     textAlign: TextAlign.left,
                     style: TextStyle(
@@ -73,6 +77,10 @@ class ProfileSep extends StatelessWidget {
                 child: Container(
                   padding: EdgeInsets.only(left: 5, right: 30),
                   child: TextField(
+                    onTap: () {
+                      print("Organization");
+                    },
+                    readOnly: true,
                     onChanged: (value) {},
                     textAlign: TextAlign.left,
                     style: TextStyle(
@@ -87,6 +95,10 @@ class ProfileSep extends StatelessWidget {
                 child: Container(
                   padding: EdgeInsets.only(left: 5, right: 30),
                   child: TextField(
+                    onTap: () {
+                      print("Both");
+                    },
+                    readOnly: true,
                     onChanged: (value) {},
                     textAlign: TextAlign.left,
                     style: TextStyle(
