@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hack_zurich_2022/auth_service.dart';
 import 'package:hack_zurich_2022/constants.dart';
+import 'package:hack_zurich_2022/login/sign_up.dart';
 
 class SignInScreen extends StatelessWidget {
   @override
@@ -98,12 +100,20 @@ class SignInScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text(
-                      "Sign Up",
-                      style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SignUpScreen()),
+                        );
+                      },
+                      child: Text(
+                        "Sign Up",
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ],
@@ -113,30 +123,39 @@ class SignInScreen extends StatelessWidget {
                 flex: 11,
                 child: SizedBox(),
               ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 35),
-                height: 67,
-                width: double.maxFinite,
-                child: Center(
-                  child: Text(
-                    'Sign In',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
+              GestureDetector(
+                onTap: (){
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => SignInScreen()),
+                  // );
+                  //TODO:
+                },
+                child: Container(
+                  margin: EdgeInsets.symmetric(horizontal: 35),
+                  height: 67,
+                  width: double.maxFinite,
+                  child: Center(
+                    child: Text(
+                      'Sign In',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                ),
-                decoration: BoxDecoration(
-                  color: Color(0xff333333),
-                  borderRadius: BorderRadius.circular(21),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color(0xff333333).withOpacity(0.5),
-                      offset:
-                      Offset(2, 2), // changes position of shadow
-                    ),
-                  ],
+                  decoration: BoxDecoration(
+                    color: Color(0xff333333),
+                    borderRadius: BorderRadius.circular(21),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0xff333333).withOpacity(0.5),
+                        offset:
+                        Offset(2, 2), // changes position of shadow
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Expanded(
@@ -168,22 +187,27 @@ class SignInScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Container(
-                        height: 67,
-                        width: 69,
-                        child: Center(
-                          child: Image.asset("assets/login/google.png"),
-                        ),
-                        decoration: BoxDecoration(
-                          color: Color(0xff333333),
-                          borderRadius: BorderRadius.circular(21),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Color(0xff333333).withOpacity(0.5),
-                              offset:
-                              Offset(2, 2), // changes position of shadow
-                            ),
-                          ],
+                      GestureDetector(
+                        onTap: (){
+                          AuthService().signInWithGoogle();
+                        },
+                        child: Container(
+                          height: 67,
+                          width: 69,
+                          child: Center(
+                            child: Image.asset("assets/login/google.png"),
+                          ),
+                          decoration: BoxDecoration(
+                            color: Color(0xff333333),
+                            borderRadius: BorderRadius.circular(21),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Color(0xff333333).withOpacity(0.5),
+                                offset:
+                                Offset(2, 2), // changes position of shadow
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],
