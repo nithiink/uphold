@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import "package:hack_zurich_2022/constants.dart";
+import 'package:hack_zurich_2022/profile/organisation1.dart';
+import 'package:hack_zurich_2022/profile/volunteer1.dart';
+import 'package:hack_zurich_2022/dashboard.dart';
+
+import 'both/bvolunteer1.dart';
 
 class ProfileSep extends StatelessWidget {
   @override
@@ -59,8 +64,12 @@ class ProfileSep extends StatelessWidget {
                 child: Container(
                   padding: EdgeInsets.only(left: 5, right: 30),
                   child: TextField(
-                    onTap: () {
+                    onTap: (){
                       print("Volunteer");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Volunteer1()),
+                      );
                     },
                     readOnly: true,
                     onChanged: (value) {},
@@ -79,6 +88,10 @@ class ProfileSep extends StatelessWidget {
                   child: TextField(
                     onTap: () {
                       print("Organization");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Organisation1()),
+                      );
                     },
                     readOnly: true,
                     onChanged: (value) {},
@@ -97,6 +110,10 @@ class ProfileSep extends StatelessWidget {
                   child: TextField(
                     onTap: () {
                       print("Both");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => BVolunteer1()),
+                      );
                     },
                     readOnly: true,
                     onChanged: (value) {},
@@ -119,12 +136,20 @@ class ProfileSep extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        "Skip",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                          color: Colors.black,
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Dashboard()),
+                          );
+                        },
+                        child: Text(
+                          "Skip",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                       Container(

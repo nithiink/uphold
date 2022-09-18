@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hack_zurich_2022/auth_service.dart';
 import 'package:hack_zurich_2022/constants.dart';
+import 'package:hack_zurich_2022/dashboard.dart';
 import 'package:hack_zurich_2022/login/sign_up.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -125,11 +126,10 @@ class SignInScreen extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: (){
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SignInScreen()),
-                  // );
-                  //TODO:
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Dashboard()),
+                  );
                 },
                 child: Container(
                   margin: EdgeInsets.symmetric(horizontal: 35),

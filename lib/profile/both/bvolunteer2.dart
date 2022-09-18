@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hack_zurich_2022/constants.dart';
-import 'package:hack_zurich_2022/profile/organisation4.dart';
+import 'package:hack_zurich_2022/profile/both/bvolunteer3.dart';
+import 'package:hack_zurich_2022/profile/volunteer3.dart';
 
-class Organisation3 extends StatelessWidget {
-
+class BVolunteer2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,11 +15,11 @@ class Organisation3 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
-                flex: 4,
+                flex: 5,
                 child: SizedBox(),
               ),
               Expanded(
-                flex: 15,
+                flex: 10,
                 child: Text(
                   "Create your\nprofile",
                   style: TextStyle(
@@ -29,7 +29,7 @@ class Organisation3 extends StatelessWidget {
                 ),
               ),
               Expanded(
-                flex: 10,
+                flex: 6,
                 child: Text(
                   "Enter Your Details",
                   style: TextStyle(
@@ -40,10 +40,10 @@ class Organisation3 extends StatelessWidget {
                 ),
               ),
               Expanded(
-                flex: 3,
+                flex: 5,
                 child: Center(
                   child: Text(
-                    "Add details about upcoming event",
+                    "Enter your work preference",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 15,
@@ -53,72 +53,63 @@ class Organisation3 extends StatelessWidget {
                 ),
               ),
               Expanded(
-                flex: 3,
+                flex: 2,
                 child: SizedBox(),
               ),
               Expanded(
                 flex: 8,
                 child: Container(
-                  padding: EdgeInsets.only(left: 5,right: 30),
+                  padding: EdgeInsets.only(left: 5, right: 30),
                   child: TextField(
-                    maxLines: 7,
-                    onChanged: (value) {
+                    onTap: () {
+                      print("In person");
                     },
+                    readOnly: true,
+                    onChanged: (value) {},
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       color: Colors.black,
                     ),
-                    decoration:
-                    kNewTextFieldDecoration.copyWith(
-                        hintText: 'Event Name'),
+                    decoration: inPersonTextFieldDecoration,
                   ),
                 ),
               ),
               Expanded(
-                flex: 3,
-                child: SizedBox(),
-              ),
-              Expanded(
-                flex: 15,
+                flex: 8,
                 child: Container(
-                  padding: EdgeInsets.only(left: 5,right: 30),
+                  padding: EdgeInsets.only(left: 5, right: 30),
                   child: TextField(
-                    maxLines: 4,
-                    onChanged: (value) {
+                    onTap: () {
+                      print("Remote");
                     },
+                    readOnly: true,
+                    onChanged: (value) {},
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       color: Colors.black,
                     ),
-                    decoration:
-                    kNewTextFieldDecoration.copyWith(
-                        hintText: 'Event Description'),
+                    decoration: remoteTextFieldDecoration,
                   ),
                 ),
               ),
               Expanded(
-                flex: 3,
-                child: SizedBox(),
-              ),
-              Expanded(
-                flex: 15,
+                flex: 8,
                 child: Container(
-                  padding: EdgeInsets.only(left: 5,right: 30),
+                  padding: EdgeInsets.only(left: 5, right: 30),
                   child: TextField(
-                    maxLines: 7,
-                    onChanged: (value) {
+                    onTap: () {
+                      print("Open to anything");
                     },
+                    readOnly: true,
+                    onChanged: (value) {},
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       color: Colors.black,
                     ),
-                    decoration:
-                    kNewTextFieldDecoration.copyWith(
-                        hintText: 'What kind of volunteers/help are \nyou looking for ?'),
+                    decoration: openTextFieldDecoration,
                   ),
                 ),
               ),
-
               Expanded(
                 flex: 3,
                 child: SizedBox(),
@@ -126,7 +117,7 @@ class Organisation3 extends StatelessWidget {
               Expanded(
                 flex: 18,
                 child: Container(
-                  padding: EdgeInsets.only(right: 40,left: 10),
+                  padding: EdgeInsets.only(right: 40, left: 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -134,7 +125,7 @@ class Organisation3 extends StatelessWidget {
                         onTap: (){
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Organisation4()),
+                            MaterialPageRoute(builder: (context) => BVolunteer3()),
                           );
                         },
                         child: Text(
@@ -150,7 +141,7 @@ class Organisation3 extends StatelessWidget {
                         onTap: (){
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Organisation4()),
+                            MaterialPageRoute(builder: (context) => BVolunteer3()),
                           );
                         },
                         child: Container(
@@ -172,7 +163,6 @@ class Organisation3 extends StatelessWidget {
                           ),
                         ),
                       ),
-
                     ],
                   ),
                 ),

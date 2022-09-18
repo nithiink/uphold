@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hack_zurich_2022/constants.dart';
-import 'package:hack_zurich_2022/dashboard.dart';
+import 'package:hack_zurich_2022/profile/organisation1.dart';
 
-class Volunteer4 extends StatelessWidget {
+class BVolunteer4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -132,7 +132,7 @@ class Volunteer4 extends StatelessWidget {
                   padding: EdgeInsets.only(left: 5,right: 30),
                   child: TextField(
                     maxLines: 4,
-                    onChanged: (value) {
+                    onChanged: (value) { 
                     },  
                     textAlign: TextAlign.left,
                     style: TextStyle(
@@ -197,7 +197,7 @@ class Volunteer4 extends StatelessWidget {
                         onTap: (){
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Dashboard()),
+                            MaterialPageRoute(builder: (context) => Organisation1()),
                           );
                         },
                         child: Text(
@@ -213,7 +213,7 @@ class Volunteer4 extends StatelessWidget {
                         onTap: (){
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Dashboard()),
+                            MaterialPageRoute(builder: (context) => Organisation1()),
                           );
                         },
                         child: Container(

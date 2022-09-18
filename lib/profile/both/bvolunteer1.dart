@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hack_zurich_2022/constants.dart';
-import 'package:hack_zurich_2022/profile/organisation4.dart';
-
-class Organisation3 extends StatelessWidget {
+import 'package:hack_zurich_2022/profile/both/bvolunteer2.dart';
+import 'package:hack_zurich_2022/profile/volunteer2.dart';
+class BVolunteer1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class Organisation3 extends StatelessWidget {
                 flex: 3,
                 child: Center(
                   child: Text(
-                    "Add details about upcoming event",
+                    "Profile Information",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 15,
@@ -57,11 +57,10 @@ class Organisation3 extends StatelessWidget {
                 child: SizedBox(),
               ),
               Expanded(
-                flex: 8,
+                flex: 10,
                 child: Container(
                   padding: EdgeInsets.only(left: 5,right: 30),
                   child: TextField(
-                    maxLines: 7,
                     onChanged: (value) {
                     },
                     textAlign: TextAlign.left,
@@ -70,58 +69,52 @@ class Organisation3 extends StatelessWidget {
                     ),
                     decoration:
                     kNewTextFieldDecoration.copyWith(
-                        hintText: 'Event Name'),
+                        hintText: 'Name'),
                   ),
                 ),
               ),
               Expanded(
                 flex: 3,
                 child: SizedBox(),
-              ),
-              Expanded(
-                flex: 15,
-                child: Container(
-                  padding: EdgeInsets.only(left: 5,right: 30),
-                  child: TextField(
-                    maxLines: 4,
-                    onChanged: (value) {
-                    },
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      color: Colors.black,
-                    ),
-                    decoration:
-                    kNewTextFieldDecoration.copyWith(
-                        hintText: 'Event Description'),
-                  ),
-                ),
-              ),
-              Expanded(
-                flex: 3,
-                child: SizedBox(),
-              ),
-              Expanded(
-                flex: 15,
-                child: Container(
-                  padding: EdgeInsets.only(left: 5,right: 30),
-                  child: TextField(
-                    maxLines: 7,
-                    onChanged: (value) {
-                    },
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      color: Colors.black,
-                    ),
-                    decoration:
-                    kNewTextFieldDecoration.copyWith(
-                        hintText: 'What kind of volunteers/help are \nyou looking for ?'),
-                  ),
-                ),
               ),
 
+              Center(
+                child: Container(
+                  height: 70,
+                  width: 180,
+                  margin: EdgeInsets.only(right: 30),
+                  child: Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Text(
+                          '+',
+                          style: TextStyle(
+                            fontSize: 17,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'Add Profile\nPhoto',
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(18),
+                  ),
+                ),
+              ),
               Expanded(
-                flex: 3,
-                child: SizedBox(),
+                flex: 34,
+                child: Center(child: Image.asset("assets/profile/profile.png"),),
               ),
               Expanded(
                 flex: 18,
@@ -134,7 +127,7 @@ class Organisation3 extends StatelessWidget {
                         onTap: (){
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Organisation4()),
+                            MaterialPageRoute(builder: (context) => BVolunteer2()),
                           );
                         },
                         child: Text(
@@ -150,9 +143,9 @@ class Organisation3 extends StatelessWidget {
                         onTap: (){
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Organisation4()),
+                            MaterialPageRoute(builder: (context) => BVolunteer2()),
                           );
-                        },
+                        }, 
                         child: Container(
                           height: 53,
                           width: 120,
