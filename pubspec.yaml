@@ -39,6 +39,7 @@ flutter:
   assets:
     - assets/login/
     - assets/profile/
+    - assets/dashboard/
 
   # fonts:
   #   - family: Schyler

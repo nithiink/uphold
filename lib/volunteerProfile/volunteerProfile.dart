@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../navbar_dashboard.dart';
+
 class VolunteerProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -8,55 +10,70 @@ class VolunteerProfileScreen extends StatelessWidget {
         width: double.infinity,
         color: Colors.black,
         padding: EdgeInsets.only(top: 70),
-        child: Column(
+        child: Stack(
           children: [
-            // Profile Picture
-            CircleAvatar(
-              backgroundColor: Colors.white,
-              radius: 70,
-              child: CircleAvatar(),
-            ),
+            Column(
+              children: [
+                // Profile Picture
+                CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 70,
+                  child: CircleAvatar(),
+                ),
 
-            SizedBox(height: 8),
+                SizedBox(height: 8),
 
-            // Name
-            Text(
-              "Oliver Queen",
-              style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.white),
-            ),
-
-            SizedBox(height: 8),
-
-            // Volunteer
-            Container(
-              child: Center(
-                child: Text(
-                  "Volunteer",
+                // Name
+                Text(
+                  "Oliver Queen",
                   style: TextStyle(
-                      fontSize: 11,
+                      fontSize: 15,
                       fontWeight: FontWeight.w700,
-                      color: Colors.black),
+                      color: Colors.white),
                 ),
-              ),
-              width: 72,
-              height: 28,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(11),
-                color: Color(0xFFFFE39B),
-                border: Border.all(
-                  color: Colors.white,
-                  width: 2,
+
+                SizedBox(height: 8),
+
+                // Volunteer
+                Container(
+                  child: Center(
+                    child: Text(
+                      "Volunteer",
+                      style: TextStyle(
+                          fontSize: 11,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.black),
+                    ),
+                  ),
+                  width: 72,
+                  height: 28,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(11),
+                    color: Color(0xFFFFE39B),
+                    border: Border.all(
+                      color: Colors.white,
+                      width: 2,
+                    ),
+                  ),
                 ),
+
+                SizedBox(height: 10),
+
+                // Body
+                Body(),
+
+              ],
+            ),
+            Container(
+              alignment: Alignment.bottomCenter,
+              margin: EdgeInsets.only(bottom: 7),
+              child: NavBarDashboard(
+                img1: Image.asset("assets/dashboard/white_home.png"),
+                img2: Image.asset("assets/dashboard/white_notifications.png"),
+                img3: Image.asset("assets/dashboard/white_search.png"),
+                img4: Image.asset("assets/dashboard/profile.png"),
               ),
             ),
-
-            SizedBox(height: 10),
-
-            // Body
-            Body()
           ],
         ),
       ),
@@ -301,9 +318,11 @@ class Body extends StatelessWidget {
                         borderRadius: new BorderRadius.circular(17.0),
                       ),
                     ),
-                  ))
+                  ),),
+              SizedBox(height: 80),
             ],
-          )
+
+          ),
         ],
       ),
       decoration: BoxDecoration(
