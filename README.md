@@ -1,16 +1,6 @@
 # UpHold
 
-A new Flutter project.
+A Flutter project for Hackzurich 2022
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view thee
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Uphold is an organizing platform that enables volunteers, sponsors & causes to connect with each other in a simple way. Volunteers can select what types of things they're good at while NGOs or other individuals can create tasks that are looking for certain skills. We allow the individuals to choose the activities which interest them while our ML algorithm helps to match individuals with the skills to the requirements.
