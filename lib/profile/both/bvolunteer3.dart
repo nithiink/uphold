@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hack_zurich_2022/constants.dart';
-import 'package:hack_zurich_2022/dashboard.dart';
+import 'package:hack_zurich_2022/profile/volunteer4.dart';
 
-class Volunteer4 extends StatelessWidget {
+import 'bvolunteer4.dart';
+
+class BVolunteer3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,9 +41,9 @@ class Volunteer4 extends StatelessWidget {
                 ),
               ),
               Expanded(
-                flex: 3,
+                flex: 3,  
                 child: Text(
-                  "Add things you want to",
+                  "Add",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 15,
@@ -58,7 +60,7 @@ class Volunteer4 extends StatelessWidget {
                       width: 66,
                       child: Center(
                         child: Text(
-                          'Donate',
+                           'Skills',
                           style: TextStyle(
                             fontSize: 15,
                             color: Colors.white,
@@ -80,10 +82,10 @@ class Volunteer4 extends StatelessWidget {
                     ),
                     Container(
                       height: 29,
-                      width: 60,
+                      width: 240,
                       child: Center(
                         child: Text(
-                          'Rent',
+                          'Ways you want to contribute',
                           style: TextStyle(
                             fontSize: 15,
                             color: Colors.white,
@@ -118,7 +120,7 @@ class Volunteer4 extends StatelessWidget {
                     ),
                     decoration:
                     kNewTextFieldDecoration.copyWith(
-                        hintText: 'Enter the item here'),
+                        hintText: 'Enter the skill here'),
                   ),
                 ),
               ),
@@ -127,20 +129,20 @@ class Volunteer4 extends StatelessWidget {
                 child: SizedBox(),
               ),
               Expanded(
-                flex: 14,
+                flex: 10,
                 child: Container(
                   padding: EdgeInsets.only(left: 5,right: 30),
                   child: TextField(
-                    maxLines: 4,
                     onChanged: (value) {
-                    },  
+                    },
+                    keyboardType: TextInputType.emailAddress,
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       color: Colors.black,
                     ),
                     decoration:
                     kNewTextFieldDecoration.copyWith(
-                        hintText: 'Enter the item description'),
+                        hintText: 'Enter the skill type'),
                   ),
                 ),
               ),
@@ -154,7 +156,7 @@ class Volunteer4 extends StatelessWidget {
                   width: 120,
                   child: Center(
                     child: Text(
-                      'Add Item  +',
+                      'Add Skill  +',
                       style: TextStyle(
                         fontSize: 14,
                         color: Colors.white,
@@ -173,15 +175,15 @@ class Volunteer4 extends StatelessWidget {
                 child: SizedBox(),
               ),
               Expanded(
-                flex: 5,
+                flex: 11,
                 child: Container(
-                  height: 30,
+                  height: 80,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      DonateBox(itemName: "Conference Hall",color: Color(0xffCBEFFF),),
-                      DonateBox(itemName: "Speakers",color: Color(0xffFF8A00).withOpacity(0.40),),
-                      DonateBox(itemName: "Truck",color: Color(0xffFF6060).withOpacity(0.32),),
+                      SkillBox(skillName: "Public Speaking",skillType: "Soft Skill",color: Color(0xffCBEFFF),),
+                      SkillBox(skillName: "Negotiation",skillType: "Soft Skill",color: Color(0xffFF8A00).withOpacity(0.40),),
+                      SkillBox(skillName: "Adaptability",skillType: "Soft Skill",color: Color(0xffFF6060).withOpacity(0.32),),
                     ],
                   ),
                 ),
@@ -197,7 +199,7 @@ class Volunteer4 extends StatelessWidget {
                         onTap: (){
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Dashboard()),
+                            MaterialPageRoute(builder: (context) => BVolunteer4()),
                           );
                         },
                         child: Text(
@@ -213,7 +215,7 @@ class Volunteer4 extends StatelessWidget {
                         onTap: (){
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Dashboard()),
+                            MaterialPageRoute(builder: (context) => BVolunteer4()),
                           );
                         },
                         child: Container(
@@ -249,11 +251,12 @@ class Volunteer4 extends StatelessWidget {
   }
 }
 
-class DonateBox extends StatelessWidget {
-  final String itemName;
+class SkillBox extends StatelessWidget {
+  final String skillName;
+  final String skillType;
   final Color color;
 
-  DonateBox({required this.color,required this.itemName});
+  SkillBox({required this.color,required this.skillName,required this.skillType});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -263,17 +266,39 @@ class DonateBox extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(20)),
       ),
 
-      height: 30,
-      width: 130,
-      child: Center(
-        child: Text(
-          itemName,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 13,
-            color: Colors.black,
+      height: 79,
+      width: 160,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Text(
+            skillName,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 13,
+              color: Colors.black,
+            ),
           ),
-        ),
+          Container(
+            height: 22,
+            width: 58,
+            child: Center(
+              child: Text(
+                skillType,
+                style: TextStyle(
+                  fontSize: 11,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            decoration: BoxDecoration(
+              color: Colors.black,
+              borderRadius: BorderRadius.circular(30),
+            ),
+          ),
+
+        ],
       ),
     );
   }

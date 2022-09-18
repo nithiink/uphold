@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hack_zurich_2022/constants.dart';
+import 'package:hack_zurich_2022/profile/volunteer2.dart';
 class Volunteer1 extends StatelessWidget {
 
   @override
@@ -121,30 +122,46 @@ class Volunteer1 extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        "Skip",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Container(
-                        height: 53,
-                        width: 120,
-                        child: Center(
-                          child: Text(
-                            'Continue',
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                            ),
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Volunteer2()),
+                          );
+                        },
+                        child: Text(
+                          "Skip",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                            color: Colors.black,
                           ),
                         ),
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(21),
+                      ),
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Volunteer2()),
+                          );
+                        }, 
+                        child: Container(
+                          height: 53,
+                          width: 120,
+                          child: Center(
+                            child: Text(
+                              'Continue',
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          decoration: BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(21),
+                          ),
                         ),
                       ),
 

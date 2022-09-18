@@ -30,8 +30,7 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Community',
-      // home: AuthService().handleAuthState(),
-      home: LandingPage(),
+      home: AuthService().handleAuthState(),
     );
   }
 }
